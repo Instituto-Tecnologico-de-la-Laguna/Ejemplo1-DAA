@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.ejemplo1.ui.theme.Ejemplo1Theme
 import android.view.Surface
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.ui.unit.sp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,9 +36,15 @@ class MainActivity : ComponentActivity() {
     }
 }
 @Composable
-fun GreetingText(message: String, modifier: Modifier = Modifier){
+fun GreetingText(message: String, from:String,modifier: Modifier = Modifier){
     Text(
-        text=message
+        text=message,
+        fontSize = 100.sp,
+        lineHeight = 116.sp
+    )
+    Text(
+        text=from,
+        fontSize = 36.sp
     )
 
 }
@@ -46,6 +53,6 @@ fun GreetingText(message: String, modifier: Modifier = Modifier){
 @Composable
 fun GreetingPreview() {
     Ejemplo1Theme {
-        GreetingText(message = "Feliz Cumpleaños Jose!")
+        GreetingText(message = "Feliz Cumpleaños Jose!", from="De Luis")
     }
 }
