@@ -13,6 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.ejemplo1.ui.theme.Ejemplo1Theme
 import android.view.Surface
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.unit.sp
 
@@ -37,15 +39,19 @@ class MainActivity : ComponentActivity() {
 }
 @Composable
 fun GreetingText(message: String, from:String,modifier: Modifier = Modifier){
-    Text(
-        text=message,
-        fontSize = 100.sp,
-        lineHeight = 116.sp
-    )
-    Text(
-        text=from,
-        fontSize = 36.sp
-    )
+
+    Column {
+        Text(
+            text = message,
+            fontSize = 100.sp,
+            lineHeight = 116.sp
+        )
+        Text(
+            text = from,
+            fontSize = 36.sp
+        )
+    }
+
 
 }
 
@@ -54,5 +60,7 @@ fun GreetingText(message: String, from:String,modifier: Modifier = Modifier){
 fun GreetingPreview() {
     Ejemplo1Theme {
         GreetingText(message = "Feliz Cumpleaños Jose!", from="De Luis")
+
+
     }
 }
