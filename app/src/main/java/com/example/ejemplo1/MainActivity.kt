@@ -81,7 +81,7 @@ fun GreetingText(message : String, from : String, modifier : Modifier = Modifier
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    Ejemplo1Theme {// llamamos al metodo para mostrarlo en el preview. Esto no lo mostrara en la version final del cel
+    Ejemplo1Theme {// llamamos al metodo para mostrarlo en el preview. Esto no lo  mostrara en la version final del cel
         GreetingText(message = "Feliz cumple Luis", from = "Barranco!!!")
     }
 }
