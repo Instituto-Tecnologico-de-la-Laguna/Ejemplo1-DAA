@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     GreetingText(
                         message = "Feliz Cumpleaños ITL",
-                        from = "De Alets",
+                        from = "De AletsMarts",
                         modifier = Modifier.padding(8.dp)
                     )
                 }
@@ -72,7 +72,7 @@ fun GreetingPreview() {
     Ejemplo1Theme {
         GreetingText(
             message = "Feliz Cumpleaños ITL!",
-            from = "De Alets"
+            from = "De AletsMarts"
         )
     }
 }
