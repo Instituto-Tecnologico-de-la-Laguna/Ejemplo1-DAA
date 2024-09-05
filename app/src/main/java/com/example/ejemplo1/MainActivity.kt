@@ -6,6 +6,8 @@ import android.view.Surface
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -26,33 +28,37 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    //GreetingText(message = "Feliz cumpleaños Tec Laguna.", from = "Isaac Burciaga" )
                 }
             }
         }
     }
-
+    //
     private fun Surface(modifier: Modifier, color: Any, function: () -> Unit) {
 
     }
 }
 
-@Composable
-fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
-    Text(
-        text = message,
-        fontSize = 100.sp,
-        lineHeight = 116.sp,
-    )
-    Text(
-        text = from,
-        fontSize = 36.sp
-    )
-}
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     Ejemplo1Theme {
-        GreetingText(message = "Feliz cumpleaños!", from = "De Isaac ")
+        GreetingText(message = "Feliz cumpleaños Tec Laguna!", from = "De Isaac ")
+    }
+}
+
+@Composable
+fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
+    Column(modifier = modifier) {
+        Text(
+            text = message,
+            fontSize = 104.sp,
+            lineHeight = 116.sp,
+        )
+        Text(
+            text = from,
+            fontSize = 36.sp
+        )
     }
 }
