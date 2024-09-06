@@ -28,11 +28,11 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = MaterialTheme.colorScheme.primaryContainer
                 ) {
                     GreetingText(
-                        message = "Feliz Cumpleaños Luis!",
-                        from = "From Jose",
+                        message = "Hola! feliz Cumpleaños Neo!, que la pases bien este dia",
+                        from = "From Tec Laguna",
                         modifier = Modifier.padding(8.dp)
                     )
                 }
@@ -48,7 +48,7 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     ) {
         Text(
             text = message,
-            fontSize = 60.sp,
+            fontSize = 50.sp,
             lineHeight = 116.sp,
             textAlign = TextAlign.Center
         )
@@ -66,6 +66,6 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingTextPreview() {
     Ejemplo1Theme {
-        GreetingText(message = "Feliz Cumpleaños Luis!", from = "From Jose")
+        GreetingText(message = "Feliz Cumpleaños Neo!", from = "de Tec Laguna")
     }
 }
