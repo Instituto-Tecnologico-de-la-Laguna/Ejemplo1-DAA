@@ -3,6 +3,7 @@ package com.example.ejemplo1
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,42 +20,45 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ejemplo1.ui.theme.Ejemplo1Theme
 
-
+//David Cardenas Gonzalez
+//21130854
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContent {
             Ejemplo1Theme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
                     GreetingText(
-                        message = "Feliz Cumpleaños Luis!",
-                        from = "From Jose",
+                        message = "Feliz Cumpleaños Tec laguna!",
+                        from = "From Garfield",
                         modifier = Modifier.padding(8.dp)
                     )
                 }
             }
         }
     }
+
 }
+
 @Composable
-fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
-    Column(
+fun GreetingText(message: String, from: String,  modifier: Modifier = Modifier) {
+    Column (
         verticalArrangement = Arrangement.Center,
         modifier = modifier
-    ) {
+    ){
         Text(
             text = message,
-            fontSize = 60.sp,
+            fontSize = 100.sp,
             lineHeight = 116.sp,
             textAlign = TextAlign.Center
         )
         Text(
             text = from,
-            fontSize = 26.sp,
+            fontSize = 65.sp,
             modifier = Modifier
                 .padding(16.dp)
                 .align(alignment = Alignment.End)
@@ -64,8 +68,11 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingTextPreview() {
+fun GreetingPreview() {
     Ejemplo1Theme {
-        GreetingText(message = "Feliz Cumpleaños Luis!", from = "From Jose")
+        GreetingText(
+            message = "Feliz Cumpleaños Tec laguna!",
+            from = "From: Garfield"
+        )
     }
 }
