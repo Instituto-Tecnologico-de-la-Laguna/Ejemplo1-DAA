@@ -76,7 +76,7 @@ fun BirthDayText(message: String, from: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun BirthdayImage(){
-    val image = painterResource(id = R.drawable.wp4470367_1440x2880_wallpapers)
+    val image = painterResource(id = R.drawable.wp4470367_1440x2880_wallpaper)
     Image(
         painter = image,
         contentDescription = null
