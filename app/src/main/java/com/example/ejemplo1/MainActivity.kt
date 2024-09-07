@@ -13,12 +13,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ejemplo1.ui.theme.Ejemplo1Theme
-
+import androidx.compose.foundation.Image
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,10 +34,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    GreetingText(
-                        message = "Feliz Cumpleaños Luis!",
-                        from = "From Jose",
-                        modifier = Modifier.padding(8.dp)
+                    BirthdayImage()
+                    BirthDayText(
+                        message = "¡Feliz Cumpleaños, Aven!",
+                        from = "From Arturo"
                     )
                 }
             }
@@ -41,31 +45,49 @@ class MainActivity : ComponentActivity() {
     }
 }
 @Composable
-fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
+fun BirthDayText(message: String, from: String, modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
+            .fillMaxSize()
+            .padding(16.dp)
     ) {
         Text(
             text = message,
-            fontSize = 60.sp,
-            lineHeight = 116.sp,
-            textAlign = TextAlign.Center
+            fontSize = 53.sp,
+            lineHeight = 65.sp,
+            textAlign = TextAlign.Center,
+            fontWeight = FontWeight.Bold,
+            fontFamily = FontFamily.Serif,
+            color = Color.White
         )
         Text(
             text = from,
-            fontSize = 26.sp,
+            fontSize = 25.sp,
             modifier = Modifier
                 .padding(16.dp)
-                .align(alignment = Alignment.End)
+                .align(alignment = Alignment.End),
+            fontFamily = FontFamily.SansSerif,
+            color = Color.White
         )
     }
+}
+
+@Composable
+fun BirthdayImage(){
+    val image = painterResource(id = R.drawable.wp4470367_1440x2880_wallpaper)
+    Image(
+        painter = image,
+        contentDescription = null
+    )
 }
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingTextPreview() {
     Ejemplo1Theme {
-        GreetingText(message = "Feliz Cumpleaños Luis!", from = "From Jose")
+        BirthdayImage()
+        BirthDayText(message = "¡Feliz Cumpleaños, Aven!", from = "From Arturo")
     }
 }
