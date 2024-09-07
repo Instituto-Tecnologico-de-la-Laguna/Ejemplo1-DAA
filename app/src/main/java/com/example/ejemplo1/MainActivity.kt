@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -19,6 +20,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ejemplo1.ui.theme.Ejemplo1Theme
 
+/*
+ * Programa: Mi Primer App
+ * Descripción: Una app para Android que muestra un saludo de cumpleaños en formato de texto.
+ * https://educacion.jlmota.net/mod/page/view.php?id=200
+ * Autor: Carlos Lopez Trujillo
+ * Número de Control: 19130933
+ * Fecha: 06/09/2024
+ */
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,8 +40,8 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     GreetingText(
-                        message = "Feliz Cumpleaños Luis!",
-                        from = "From Jose",
+                        message = "Feliz Cumpleaños Tec Laguna!",
+                        from = "From Charlie",
                         modifier = Modifier.padding(8.dp)
                     )
                 }
@@ -54,7 +63,7 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
         )
         Text(
             text = from,
-            fontSize = 26.sp,
+            fontSize = 36.sp,
             modifier = Modifier
                 .padding(16.dp)
                 .align(alignment = Alignment.End)
@@ -66,6 +75,10 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingTextPreview() {
     Ejemplo1Theme {
-        GreetingText(message = "Feliz Cumpleaños Luis!", from = "From Jose")
+        GreetingText(
+            message = "Feliz Cumpleaños Tec laguna!",
+            from = "From: Charlie"
+        )
     }
+
 }
