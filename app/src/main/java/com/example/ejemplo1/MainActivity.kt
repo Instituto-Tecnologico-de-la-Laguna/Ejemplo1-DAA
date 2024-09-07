@@ -20,7 +20,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ejemplo1.ui.theme.Ejemplo1Theme
 
-
+/*
+ * Programa: Mi Primer App
+ * Descripción: Una app para Android que muestra un saludo de cumpleaños en formato de texto.
+ * https://educacion.jlmota.net/mod/page/view.php?id=200
+ * Autor: Carlos Lopez Trujillo
+ * Número de Control: 19130933
+ * Fecha: 06/09/2024
+ */
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,15 +57,15 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     ) {
         Text(
             text = message,
-            fontSize = 100.sp,
+            fontSize = 60.sp,
             lineHeight = 116.sp,
             textAlign = TextAlign.Center
         )
         Text(
             text = from,
-            fontSize = 65.sp,
+            fontSize = 36.sp,
             modifier = Modifier
-                .padding(20.dp)
+                .padding(16.dp)
                 .align(alignment = Alignment.End)
         )
     }
