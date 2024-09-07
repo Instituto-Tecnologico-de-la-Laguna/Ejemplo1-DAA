@@ -3,6 +3,7 @@ package com.example.ejemplo1
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,7 +20,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ejemplo1.ui.theme.Ejemplo1Theme
 
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +31,8 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     GreetingText(
-                        message = "Feliz Cumpleaños Luis!",
-                        from = "From Jose",
+                        message = "Feliz Cumpleaños Tec Laguna!",
+                        from = "De Fernanda",
                         modifier = Modifier.padding(8.dp)
                     )
                 }
@@ -40,6 +40,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
 @Composable
 fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
     Column(
@@ -66,6 +67,6 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingTextPreview() {
     Ejemplo1Theme {
-        GreetingText(message = "Feliz Cumpleaños Luis!", from = "From Jose")
+        GreetingText(message = "Feliz Cumpleaños Tec Laguna!", from = "De Fernanda")
     }
 }
