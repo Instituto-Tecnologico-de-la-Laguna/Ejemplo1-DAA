@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.primary
                 ) {
                     GreetingText(
-                        message = "Hola!. feliz Cumpleaños Neo!, que la pases bien este dia",
+                        message = "Hola! Feliz Cumpleaños Neo!, que la pases bien este dia",
                         from = "From Tec Laguna",
                         modifier = Modifier.padding(8.dp)
                     )
