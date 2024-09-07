@@ -25,14 +25,13 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Ejemplo1Theme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
+
                 ) {
-                    GreetingText(
-                        message = "Feliz Cumpleaños Luis!",
-                        from = "From Jose",
+                    GreetingText(message = "Feliz Cumpleaños Valeria ",
+                        from = "From Vale",
                         modifier = Modifier.padding(8.dp)
                     )
                 }
@@ -41,31 +40,32 @@ class MainActivity : ComponentActivity() {
     }
 }
 @Composable
-fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
-    Column(
+fun GreetingText(message: String, from: String,  modifier: Modifier = Modifier) {
+    Column (
         verticalArrangement = Arrangement.Center,
         modifier = modifier
-    ) {
-        Text(
-            text = message,
-            fontSize = 60.sp,
-            lineHeight = 116.sp,
-            textAlign = TextAlign.Center
-        )
+    )
+    {  Text(
+        text = message,
+        fontSize = 60.sp,
+        lineHeight = 116.sp,
+        textAlign = TextAlign.Center
+    )
+
         Text(
             text = from,
-            fontSize = 26.sp,
+            fontSize = 36.sp,
             modifier = Modifier
                 .padding(16.dp)
                 .align(alignment = Alignment.End)
         )
     }
-}
 
+}
 @Preview(showBackground = true)
 @Composable
-fun GreetingTextPreview() {
+fun GreetingPreview() {
     Ejemplo1Theme {
-        GreetingText(message = "Feliz Cumpleaños Luis!", from = "From Jose")
+        GreetingText(message = "Feliz Cumpleaños Tecnologico de la laguna", from = "De Valeria")
     }
 }
