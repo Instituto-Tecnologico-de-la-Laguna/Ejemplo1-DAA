@@ -28,10 +28,10 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.primaryContainer
+                    color = MaterialTheme.colorScheme.primary
                 ) {
                     GreetingText(
-                        message = "Hola! feliz Cumpleaños Neo!, que la pases bien este dia",
+                        message = "Hola!. feliz Cumpleaños Neo!, que la pases bien este dia",
                         from = "From Tec Laguna",
                         modifier = Modifier.padding(8.dp)
                     )
